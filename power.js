@@ -10,9 +10,12 @@ let A = Matrix([
 function power(mtrx,p){
     //mtrx is the matrix you input
     //p is the power of the matrix you want
-    for(let i = 0; i < p; i++)
+    let newmtrx = mtrx;
+    for (let a=0; a<p-1;a++)
+        newmtrx = Matrix (newmtrx.prod(mtrx));
+    }
+    return newmtrx;
 }
-
 
 //testing code
 console.log(power(A,10));
